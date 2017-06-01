@@ -1,0 +1,45 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Have you ever heard the tradegy of darth Plagueis the wise?</title>
+    <link rel="stylesheet" type="text/css" href="hotelcss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <img src="hotelsang.png" id="ikon" alt="ikon">
+        <ul>
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="HotelUpplevelser.html">Uppleva</a></li>
+            <li><a href="HotelMat.html">Mat och dryck</a></li>
+            <li><a href="HotelHitta.html">Hitta</a></li>
+            <li><a href="HotelBoka.html">Boka</a></li>
+            <li><a href="HotelKontakt.html">Kontakta</a></li>
+        </ul>
+        <div id="map"></div>
+        <script>
+            
+            $('.handle').on('click', function(){
+                $('nav ul').toggleClass('showing');
+            });
+            
+          function initMap() {
+            var Citadellsvägen = {lat: 30.606739, lng: 28.986679};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 13,
+              center: Citadellsvägen
+
+            });
+            var marker = new google.maps.Marker({
+              position: Citadellsvägen,
+              map: map
+            });
+          }
+        </script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9GvLtAxZ8uWDbig6u9uoX5vMaebSd9LY&callback=initMap">
+        </script>
+        
+        <footer>Telefonnummer: 987398493264 Epostadress: BrightHotell@Hotell.se</footer>
+    </body>
+</html>
