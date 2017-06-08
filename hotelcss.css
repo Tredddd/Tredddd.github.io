@@ -56,12 +56,14 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+
 }
 
 li {
     float: left;
     min-width: 48px;
-    margin: 5px
+    margin: 5px;
+    display:inline-block;
 }
 
 li a {
@@ -70,10 +72,37 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	min-width:140px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	background: #2f3036;
 }
 
 li a:hover {
     background-color: #111;
+}
+
+li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	background: #2f3036;
+	text-align: center;
+	padding: 10px;
+	display: none;
 }
 
 footer{
@@ -122,6 +151,15 @@ img#kontakt{
     width: 40%;
 }
 
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+
 @media screen and (max-width: 900px){
     section#vanster{
         float: none;
@@ -148,6 +186,19 @@ img#kontakt{
     img#resturang{
         display: none;
     }
+    
+    .show-menu {
+		display:block;
+	}
+    
+    ul {
+		position: static;
+		display: none;
+	}
+    
+	ul li, li a {
+		width: 100%;
+        text-align: center;
+	}
+    
 }
-
-
