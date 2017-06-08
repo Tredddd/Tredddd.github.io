@@ -72,7 +72,6 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-	min-width:140px;
 	height: 50px;
 	line-height: 50px;
 	color: #fff;
@@ -96,7 +95,6 @@ li:hover ul a:hover {
 }
 
 .show-menu {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	color: #fff;
 	background: #2f3036;
@@ -159,7 +157,6 @@ input[type=checkbox]:checked ~ #menu{
     display: block;
 }
 
-
 @media screen and (max-width: 900px){
     section#vanster{
         float: none;
@@ -197,7 +194,8 @@ input[type=checkbox]:checked ~ #menu{
 	}
     
 	ul li, li a {
-		width: 100%;
+        
+        width: 98%;
         text-align: center;
 	}
     
